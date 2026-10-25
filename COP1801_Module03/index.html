@@ -1,0 +1,68 @@
+ <title>Module 03 JavaScript Assignment</title>
+</head>
+
+<body>
+
+    <h1>Module 03: JavaScript Loops and Arrays</h1>
+
+    <h2>Part 1: For Loop - Odd and Even Numbers</h2>
+
+    <script>
+// For loop to count from 0 to 10
+for (let count = 0; count <= 10; count++) {
+
+    // Check if the number is even or odd
+    if (count % 2 === 0) {
+        document.write("Count " + count + " is even<br>");
+    } else {
+        document.write("Count " + count + " is odd<br>");
+    }
+
+}
+    </script>
+<h2>Part 2: Do While Loop</h2>
+
+<script>
+    // Ask the user for a number between 5 and 20
+    let myNum;
+
+do {
+    myNum = Number(prompt("Enter a whole number between 5 and 20:"));
+} while (!Number.isInteger(myNum) || myNum < 5 || myNum > 20);
+
+    // Start the loop counter at 1
+    let counter = 1;
+
+    // Do While loop
+    do {
+        document.write("Loop Counter: " + counter + "<br>");
+        counter++;
+    } while (counter <= myNum);
+</script>
+
+<h2>Part 3: JavaScript Arrays</h2>
+
+<script>
+    // Create an array to store five subjects
+    let subjects = [
+        "Accounting",
+        "Algebra",
+        "Programming",
+        "Art",
+        "Data Analytics"
+    ];
+
+    // Display each subject using forEach()
+    document.write("<h3>Subjects Using forEach():</h3>");
+
+    subjects.forEach(function(subject) {
+        document.write(subject + "<br>");
+    });
+
+    // Display all subjects separated by commas
+    document.write("<h3>Subjects Separated by Commas:</h3>");
+    document.write(subjects.join(", "));
+</script>
+
+</body>
+</html>
